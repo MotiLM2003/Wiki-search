@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 const Dropdown = ({ options, selected, setSelected }) => {
   const [open, setOpen] = useState(false);
   const ref = useRef();
+
   const setEvent = (e) => {
     if (!ref.current.contains(e.target)) {
       setOpen(false);
@@ -14,7 +15,7 @@ const Dropdown = ({ options, selected, setSelected }) => {
 
     return () => {
       console.log('called');
-      document.removeEventListener('click', setEvent);
+      document.body.removeEventListener('click', setEvent);
     };
   }, []);
   const renderedOptions = options.map((option) => {
