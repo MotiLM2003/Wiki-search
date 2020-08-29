@@ -14,8 +14,7 @@ var _default = _axios["default"].create({
     action: 'query',
     list: 'search',
     origin: '*',
-    format: 'json',
-    srsearch: 'test'
+    format: 'json'
   }
 });
 

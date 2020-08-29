@@ -6,6 +6,5 @@ export default axios.create({
     list: 'search',
     origin: '*',
     format: 'json',
-    srsearch: 'test',
   },
 });
