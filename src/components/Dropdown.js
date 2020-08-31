@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const Dropdown = ({ options, selected, setSelected }) => {
+const Dropdown = ({ label, options, selected, setSelected }) => {
   const [open, setOpen] = useState(false);
   const ref = useRef();
 
@@ -34,7 +34,7 @@ const Dropdown = ({ options, selected, setSelected }) => {
     <div ref={ref} className='ui form'>
       <div className='field'>
         <label htmlFor='' className='label'>
-          Select a color
+          {label}
         </label>
 
         <div
@@ -51,5 +51,7 @@ const Dropdown = ({ options, selected, setSelected }) => {
     </div>
   );
 };
+
+Dropdown.defaultProps = { label: 'Please select an item' };
 
 export default Dropdown;
