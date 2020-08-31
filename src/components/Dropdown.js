@@ -14,7 +14,6 @@ const Dropdown = ({ label, options, selected, setSelected }) => {
     document.body.addEventListener('click', setEvent);
 
     return () => {
-      console.log('called');
       document.body.removeEventListener('click', setEvent);
     };
   }, []);
